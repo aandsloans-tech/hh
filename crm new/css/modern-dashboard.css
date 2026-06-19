@@ -1,0 +1,879 @@
+/* ===== MODERN DASHBOARD STYLES ===== */
+
+/* Modal Styles */
+.lead-detail-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.lead-detail-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border2);
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.lead-detail-tab-btn {
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text2);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lead-detail-tab-btn:hover {
+    background: var(--bg1);
+    color: var(--text);
+}
+
+.lead-detail-tab-btn.active {
+    background: var(--blue2);
+    color: white;
+    border-color: var(--blue2);
+}
+
+.lead-detail-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.lead-detail-tab-content {
+    display: none;
+}
+
+.lead-detail-tab-content.active {
+    display: block;
+}
+
+.lead-modal-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lead-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border2);
+}
+
+.modal-title-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(45, 156, 219, 0.1);
+    border-radius: 6px;
+    color: var(--blue2);
+}
+
+.lead-detail-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lead-detail-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px;
+    background: var(--bg1);
+    border-radius: 6px;
+    border-left: 3px solid var(--blue2);
+}
+
+.lead-detail-row strong {
+    color: var(--text2);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lead-detail-row span {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.remarks-preview {
+    padding: 12px;
+    background: var(--bg2);
+    border-radius: 6px;
+    border-left: 3px solid var(--gold);
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.remarks-preview:hover {
+    background: var(--bg3);
+}
+
+/* Time Log Styles */
+.time-log-empty {
+    padding: 20px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 13px;
+}
+
+.time-log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.time-log-table thead tr {
+    background: var(--bg1);
+    border-bottom: 1px solid var(--border2);
+}
+
+.time-log-table th {
+    padding: 12px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: uppercase;
+}
+
+.time-log-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border2);
+    font-size: 13px;
+}
+
+.time-log-table tr:hover {
+    background: var(--bg1);
+}
+
+/* Edit Form Styles */
+.fg-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 1024px) {
+    .fg-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fg {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fg-full {
+    grid-column: 1 / -1;
+}
+
+.fg label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text2);
+    text-transform: uppercase;
+}
+
+.fg input,
+.fg textarea,
+.fg select {
+    padding: 8px 12px;
+    background: var(--bg1);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.fg input:focus,
+.fg textarea:focus,
+.fg select:focus {
+    outline: none;
+    border-color: var(--blue2);
+    background: var(--bg2);
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+.fg textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Section Card Styles */
+.section-card {
+    background: var(--bg1);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title i {
+    color: var(--blue2);
+}
+
+/* Bank Records Styles */
+.bank-input-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+    .bank-input-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.bank-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bank-input-field label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text2);
+}
+
+.bank-input {
+    padding: 8px 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.bank-input:focus {
+    outline: none;
+    border-color: var(--blue2);
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+.bank-select {
+    cursor: pointer;
+}
+
+.bank-records-container,
+.editBankRecordsContainer {
+    background: var(--bg2);
+    border-radius: 6px;
+    border: 1px solid var(--border2);
+    overflow: hidden;
+}
+
+.bank-grid-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 0.8fr;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg1);
+    border-bottom: 1px solid var(--border2);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+}
+
+.bank-col-name { grid-column: 1; }
+.bank-col-contact { grid-column: 2; }
+.bank-col-status { grid-column: 3; }
+.bank-col-actions { grid-column: 4; }
+
+.bank-record-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 0.8fr;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border2);
+    align-items: center;
+}
+
+.bank-record-row:last-child {
+    border-bottom: none;
+}
+
+.bank-empty-state {
+    padding: 20px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 12px;
+}
+
+.bank-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.bank-status-badge.status-pending {
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--gold);
+}
+
+.bank-status-badge.status-in-progress {
+    background: rgba(45, 156, 219, 0.15);
+    color: var(--blue2);
+}
+
+.bank-status-badge.status-approved {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4caf50;
+}
+
+.bank-status-badge.status-rejected {
+    background: rgba(244, 67, 54, 0.15);
+    color: #f44336;
+}
+
+.bank-action-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: var(--bg1);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.bank-action-btn.bank-edit {
+    color: var(--blue2);
+}
+
+.bank-action-btn.bank-edit:hover {
+    background: rgba(45, 156, 219, 0.1);
+}
+
+.bank-action-btn.bank-delete {
+    color: #f44336;
+}
+
+.bank-action-btn.bank-delete:hover {
+    background: rgba(244, 67, 54, 0.1);
+}
+
+/* Loan Records Styles */
+.loan-input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+    .loan-input-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .loan-input-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.loan-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.loan-input-field label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text2);
+}
+
+.loan-input {
+    padding: 8px 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.loan-input:focus {
+    outline: none;
+    border-color: var(--blue2);
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+.loan-input.loan-select {
+    cursor: pointer;
+}
+
+.loan-input.loan-remarks {
+    grid-column: 1 / -1;
+    min-height: 60px;
+}
+
+.loan-table-container,
+.editLoanTableContainer {
+    background: var(--bg2);
+    border-radius: 6px;
+    border: 1px solid var(--border2);
+    overflow: auto;
+}
+
+.loan-grid-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 1fr 1.2fr 1fr 1.2fr 0.8fr;
+    gap: 8px;
+    padding: 12px;
+    background: var(--bg1);
+    border-bottom: 1px solid var(--border2);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+    white-space: nowrap;
+    min-width: 1200px;
+}
+
+.loan-record-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 1fr 1.2fr 1fr 1.2fr 0.8fr;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border2);
+    align-items: center;
+    font-size: 12px;
+    min-width: 1200px;
+}
+
+.loan-record-row:last-child {
+    border-bottom: none;
+}
+
+.loan-empty-state {
+    padding: 20px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 12px;
+}
+
+.loan-col-bank { grid-column: 1; }
+.loan-col-applicant { grid-column: 2; }
+.loan-col-type { grid-column: 3; }
+.loan-col-date { grid-column: 4; }
+.loan-col-amount { grid-column: 5; }
+.loan-col-emi { grid-column: 6; }
+.loan-col-rate { grid-column: 7; }
+.loan-col-outstanding { grid-column: 8; }
+.loan-col-status { grid-column: 9; }
+.loan-col-remarks { grid-column: 10; }
+.loan-col-actions { grid-column: 11; }
+
+.loan-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.loan-status-badge.status-active {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4caf50;
+}
+
+.loan-status-badge.status-pending {
+    background: rgba(245, 166, 35, 0.15);
+    color: var(--gold);
+}
+
+.loan-status-badge.status-closed {
+    background: rgba(158, 158, 158, 0.15);
+    color: #9e9e9e;
+}
+
+.loan-status-badge.status-default {
+    background: rgba(244, 67, 54, 0.15);
+    color: #f44336;
+}
+
+.loan-action-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: var(--bg1);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.loan-action-btn.loan-edit {
+    color: var(--blue2);
+}
+
+.loan-action-btn.loan-edit:hover {
+    background: rgba(45, 156, 219, 0.1);
+}
+
+.loan-action-btn.loan-delete {
+    color: #f44336;
+}
+
+.loan-action-btn.loan-delete:hover {
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.merits-toolbar {
+    margin-bottom: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.merits-preview {
+    background: var(--bg1);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: var(--text2);
+    font-size: 12px;
+    min-height: 60px;
+}
+
+.merits-table-wrap {
+    overflow: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border2);
+}
+
+.data-entry-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg2);
+}
+
+.data-entry-table thead tr {
+    background: var(--bg1);
+    border-bottom: 1px solid var(--border2);
+}
+
+.data-entry-table th {
+    padding: 12px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text2);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.data-entry-table td {
+    padding: 8px;
+    border-bottom: 1px solid var(--border2);
+}
+
+.data-entry-table td input,
+.data-entry-table td textarea {
+    width: 100%;
+    padding: 6px 8px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.data-entry-table td input:focus,
+.data-entry-table td textarea:focus {
+    outline: none;
+    border-color: var(--blue2);
+    box-shadow: 0 0 0 2px rgba(45, 156, 219, 0.1);
+}
+
+/* Financial Analysis Styles */
+.fa-section {
+    background: var(--bg1);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.fa-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fa-section-title i {
+    color: var(--blue2);
+}
+
+.fa-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 1024px) {
+    .fa-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fa-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fa-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.fa-input-field label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text2);
+}
+
+.fa-input {
+    padding: 8px 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.fa-input:focus {
+    outline: none;
+    border-color: var(--blue2);
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+.fa-input.fa-readonly {
+    background: var(--bg1);
+    cursor: not-allowed;
+}
+
+.fa-currency {
+    position: absolute;
+    right: 12px;
+    top: 31px;
+    font-size: 12px;
+    color: var(--text2);
+    pointer-events: none;
+}
+
+.fa-auto-calc {
+    font-size: 10px;
+    color: var(--blue2);
+    font-weight: 600;
+    background: rgba(45, 156, 219, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.fa-grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 1024px) {
+    .fa-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fa-grid-3col {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fa-textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s ease;
+}
+
+.fa-textarea:focus {
+    outline: none;
+    border-color: var(--blue2);
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+/* Tabs Styles */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border2);
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--border2);
+    border-radius: 6px;
+    color: var(--text2);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tab:hover {
+    background: var(--bg1);
+    color: var(--text);
+}
+
+.tab.active {
+    background: var(--blue2);
+    color: white;
+    border-color: var(--blue2);
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lead-detail-row {
+        grid-template-columns: 1fr;
+    }
+
+    .lead-detail-tabs {
+        gap: 4px;
+    }
+
+    .lead-detail-tab-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .bank-grid-header,
+    .bank-record-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .bank-col-name,
+    .bank-col-contact,
+    .bank-col-status,
+    .bank-col-actions {
+        grid-column: auto !important;
+    }
+
+    .loan-grid-header,
+    .loan-record-row {
+        grid-template-columns: 1fr !important;
+        min-width: auto;
+    }
+
+    .loan-col-bank,
+    .loan-col-applicant,
+    .loan-col-type,
+    .loan-col-date,
+    .loan-col-amount,
+    .loan-col-emi,
+    .loan-col-rate,
+    .loan-col-outstanding,
+    .loan-col-status,
+    .loan-col-remarks,
+    .loan-col-actions {
+        grid-column: auto !important;
+    }
+}
